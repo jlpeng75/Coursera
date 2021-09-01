@@ -1,0 +1,26 @@
+#
+# This is the server logic of a Shiny web application. You can run the 
+# application by clicking 'Run App' above.
+#
+# Find out more about building applications with Shiny here:
+# 
+#    http://shiny.rstudio.com/
+#
+
+library(shiny)
+
+# Define server logic required to draw a histogram
+shinyServer(function(input, output) {
+   
+  output$selected_var <- renderText({
+    
+    # generate bins based on input$bins from ui.R
+     paste0("You have selected: ", input$var)
+    
+  })
+  
+  output$selected_range <- renderText({
+      paste0("You have selected range: ", input$range)
+  })
+  
+})

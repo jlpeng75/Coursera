@@ -1,0 +1,29 @@
+---
+title: "Map from Home to Work"
+author: "Jianling Peng"
+date: "August 6, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r leaflet}
+library(leaflet)
+```
+
+## Draw a map, add label for Home and Work.
+
+```{r, echo=FALSE}
+
+df <- data.frame(lat = c(38.625821,38.657382), lng = c(-90.519893, -90.554277))
+my_map <- leaflet() %>%
+    addTiles() %>%
+    addMarkers(lat = df$lat, lng = df$lng, label = c("Home", "Work"),
+               labelOptions=labelOptions(noHide = T))
+my_map
+```
+

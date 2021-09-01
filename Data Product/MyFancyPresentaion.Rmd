@@ -1,0 +1,42 @@
+---
+title: "My Fancy Presentation"
+author: "Jianling Peng"
+date: "June 28, 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## My new slide
+
+SOme content
+
+***
+A slide without a title
+
+## My title
+
+### A top level subheading
+
+#### A second level subheading
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
